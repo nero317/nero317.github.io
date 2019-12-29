@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
-  </head>
-  <body>
-    <h1>Hello, world! Hi</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+</head>
 
+<body>
+  <div id="header">
+    <h1>Hello</h1>
+  </div>
+  <div id="section">
+    <button type="btn" class="btn btn-primary">다운</button>
+  </div>
+  <script type="text/javascript">
+   var contextPath = '${contextPath}/';
+   $(document).ready(function(){
 
+      $("#download_btn").click(function() {
+           download();
+   });
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
-  </body>
+   function download() {
+      var url = contextPath + "file/Haf_TKGB.exe";
+      location.href=url;
+   }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+</body>
+
 </html>
