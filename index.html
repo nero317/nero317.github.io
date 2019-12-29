@@ -15,21 +15,21 @@
     <h1>Hello</h1>
   </div>
   <div id="section">
-    <button type="btn" class="btn btn-primary">다운</button>
+    <button type="submit" class="btn btn-primary"  id="download_btn">다운</button>
+    <script type="text/javascript">
+     var contextPath = '${contextPath}/';
+     $(document).ready(function(){
+
+        $("#download_btn").click(function() {
+             download();
+     });
+
+     function download() {
+        var url = contextPath + "file/Haf_TKGB.exe";
+        location.href=url;
+     }
+    </script>
   </div>
-  <script type="text/javascript">
-   var contextPath = '${contextPath}/';
-   $(document).ready(function(){
-
-      $("#download_btn").click(function() {
-           download();
-   });
-
-   function download() {
-      var url = contextPath + "file/Haf_TKGB.exe";
-      location.href=url;
-   }
-  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
 </body>
